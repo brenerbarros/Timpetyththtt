@@ -1,0 +1,100 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="52dp"
+        android:text="Registro"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    
+    <EditText
+        android:id="@+id/registerName"
+        android:hint="Nome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@id/textView1"
+        android:layout_marginTop="52dp"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+    
+    <EditText
+        android:id="@+id/registerPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/registerName"
+        android:layout_alignTop="@id/registerName"
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:hint="Insira uma senha"
+        android:inputType="textPassword" />
+    
+    <EditText
+        android:id="@+id/confirmPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/registerName"
+        android:layout_alignTop="@id/registerPass"
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:hint="Confirme a senha" 
+        android:inputType="textPassword"/>
+    
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/confirmPass"
+        android:layout_marginTop="45dp"
+        android:textSize="10dp"
+        android:textColor="@color/Red"
+        android:text=""
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/confirmRegister"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@id/confirmPass"
+        android:layout_marginTop="80dp"
+        android:text="Confirmar"
+        android:onClick="confirm_register" />
+    
+    <TextView
+        android:id="@+id/textLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@id/confirmRegister"
+        android:layout_marginTop="50dp"
+        android:text="Login"
+        android:clickable="true"
+        android:onClick="click_textLogin" />
+
+    <TextView
+        android:id="@+id/textCredits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:layout_alignTop="@id/textLogin"
+		android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:text="Créditos"
+        android:clickable="true"
+        android:onClick="click_textCredits" />
+
+</RelativeLayout>
